@@ -138,13 +138,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	{\mcm@endoldtabular\egroup}
 % 每行缩进两个汉字
 \setlength\parindent{2em}
-% 设置字体
-\setmainfont{Times New Roman}
-\setsansfont{Arial}
-\setCJKfamilyfont{kai}[AutoFakeBold]{AR PL KaitiM GB}
-\newcommand*{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{song}[AutoFakeBold]{AR PL SungtiL GB}
-\newcommand*{\song}{\CJKfamily{song}}
 
 
 
