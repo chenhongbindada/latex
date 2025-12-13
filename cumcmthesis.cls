@@ -140,12 +140,12 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \setlength\parindent{2em}
 % 设置字体
 \setmainfont{Times New Roman}
-%\setmonofont{Courier New}
 \setsansfont{Arial}
-\setCJKfamilyfont{kai}[AutoFakeBold]{simkai.ttf}
+\setCJKfamilyfont{kai}[AutoFakeBold]{AR PL KaitiM GB}
 \newcommand*{\kai}{\CJKfamily{kai}}
-\setCJKfamilyfont{song}[AutoFakeBold]{SimSun}
+\setCJKfamilyfont{song}[AutoFakeBold]{AR PL SungtiL GB}
 \newcommand*{\song}{\CJKfamily{song}}
+
 
 \renewcommand\normalsize{%
 	\@setfontsize\normalsize{12.05}{14.45}%
