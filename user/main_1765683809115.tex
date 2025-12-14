@@ -1,0 +1,28 @@
+% 简单的中文 LaTeX 示例
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+\usepackage{ctex}
+\usepackage{amsmath}
+
+\title{测试文档}
+\author{测试用户}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{引言}
+这是一个测试文档，用于验证直接编译功能。
+
+\section{数学公式}
+这是一个行内公式：$E = mc^2$
+
+这是一个行间公式：
+\[
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\]
+
+\section{结论}
+测试成功！
+
+\end{document}
