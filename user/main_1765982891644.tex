@@ -1,0 +1,28 @@
+% !Mode:: "TeX:UTF-8"
+%!TEX program  = xelatex
+\documentclass{cumcmthesis}
+\usepackage{url} %正确排版 URL 地址
+\usepackage{graphicx} %插入和管理图像
+\graphicspath{{./}{./assets/}{./paper/assets/}{../assets/}}% 确保图像被正确识别
+\usepackage{float} %控制浮动对象（如表格和图形）的放置位置
+\captionsetup[table]{skip=10pt} % 调整表格标题和表格之间的距离
+\usepackage{threeparttable} %表格中使用注释功能
+\usepackage{longtable} %创建跨页的长表格
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins} % 导言区加入，仅需一次
+
+\begin{document}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/02_CART_calibration.png}
+    \caption{图像说明}
+    \label{fig:auto-1765980331058}
+\end{figure}
+
+
+
+\end{document}
