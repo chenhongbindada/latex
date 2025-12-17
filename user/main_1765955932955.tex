@@ -1,0 +1,48 @@
+% !Mode:: "TeX:UTF-8"
+%!TEX program  = xelatex
+
+\documentclass[withoutpreface,bwprint]{cumcmthesis}
+\usepackage{url} %正确排版 URL 地址
+\usepackage{graphicx} %插入和管理图像
+\graphicspath{{./}{./assets/}{./paper/assets/}{../assets/}}% 确保图像被正确识别
+\usepackage{float} %控制浮动对象（如表格和图形）的放置位置
+\captionsetup[table]{skip=10pt} % 调整表格标题和表格之间的距离
+\usepackage{threeparttable} %表格中使用注释功能
+\usepackage{longtable} %创建跨页的长表格
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{placeins} % 导言区加入，仅需一次
+% 字体字号定义
+\newcommand{\xiaosi}{\fontsize{12pt}{15pt}\selectfont} % 小四
+\newcommand{\xiaowu}{\fontsize{10.5pt}{13pt}\selectfont} % 小五
+\usepackage{amsmath}
+\DeclareMathOperator{\logit}{logit}
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\usepackage{geometry}
+
+\begin{document}
+
+
+{
+  "text": "% ==== 模型假设与符号说明 ====\n\\section{模型假设与符号说明}\n\n\\subsection{模型假设}\n\n\\textbf{假设1·} \\textbf{POI地理代表性假设}：\n假设具有相同`poi_id`的运单地址在地理空间上是充分邻近的，可以被视为同一个“地理兴趣点”或微区域，能够作为地址聚类的有效依据。\n\n\\textbf{假设2·} \\textbf{历史数据代表性假设}：\n假设附件1中提供的历史运单数据足以反映各区域及各类运单在未来一段时间内的相对风险水平，即历史异常率可以作为未来风险的有效预测指标。\n\n\\textbf{假设3·} \\textbf{理赔数据完备性假设}：\n假设`claim_flag`字段准确无误地记录了所有发生理赔的运单，不存在漏报或错报。\n\n\\textbf{假设4·} \\textbf{风险衡量标准合理性假设}：\n对于区域风险，假设异常率和运单规模是衡量其风险价值的核心指标；对于单个运单风险，假设所有异常运单的理赔成本近似或预测概率是其风险的最佳代理指标。\n\n\\textbf{假设5·} \\textbf{样本不平衡处理有效性假设}：\n假设通过SMOTE算法合成的少数类（理赔运单）样本能够有效代表真实少数类样本的特征空间分布，有助于模型学习到更鲁棒的分类边界，提升对异常运单的识别能力。\n\n\n\\subsection{符号说明}\n\n下表列出了本文建模过程中使用的主要符号及其说明。\n\n\\begin{longtable}{cl}\n\\hline\n\\specialrule{0.8pt}{0pt}{0pt}\n\\makebox[0.35\\textwidth][c]{符号} & \\makebox[0.6\\textwidth][c]{意义} \\\\ \\hline\n\\multicolumn{2}{l}{\\textbf{问题一：风险区域识别模型}} \\\\\n$\\mathcal{D}$ & 历史运单数据集 \\\\\n$\\mathcal{P}$ & 所有唯一POI的集合，代表所有区域 \\\\\n$p_j$ & 第$j$个唯一的POI标识，代表一个区域 \\\\\n$n_j$ & POI区域$p_j$内的总运单数 \\\\\n$c_j$ & POI区域$p_j$内的理赔运单数 \\\\\n$r_j$ & POI区域$p_j$的异常率（理赔率），$r_j = c_j / n_j$ \\\\\n$S_j$ & POI区域$p_j$的综合风险得分 \\\\\n$N_{min}$ & 识别为风险区域所需的最小运单量阈值 \\\\\n$K$ & 预设的重点风险区域数量 \\\\\n\\hline\n\\multicolumn{2}{l}{\\textbf{问题二：异常运单识别模型}} \\\\\n$\\mathcal{D}_{train}$ & 训练运单数据集（源自附件1） \\\\\n$\\mathcal{D}_{test}$ & 待识别运单数据集（源自附件2） \\\\\n$\\mathbf{x}_i$ & 第$i$个运单的特征向量 \\\\\n$y_i$ & 第$i$个运单的真实理赔标签（1为理赔，0为未理赔） \\\\\n$f(\\mathbf{x}_i; \\mathbf{\\theta})$ & 异常运单识别模型，$\\mathbf{\\theta}$为模型参数 \\\\\n$P(y_i=1 | \\mathbf{x}_i)$ & 模型预测第$i$个运单发生理赔的概率 \\\\\n$L(\\mathbf{\\theta})$ & 模型训练的损失函数（如交叉熵损失） \\\\\n$N_{limit}$ & 特殊保障服务的最多投放数量上限（$N_{limit}=300$） \\\\\n\\hline\n\\specialrule{0.9pt}{0pt}{0pt}\n\\end{longtable}\n\\newpage",
+  "usage": {
+    "prompt_tokens": 0,
+    "prompt_unit_price": "0.0",
+    "prompt_price_unit": "0.0",
+    "prompt_price": "0.0",
+    "completion_tokens": 0,
+    "completion_unit_price": "0.0",
+    "completion_price_unit": "0.0",
+    "completion_price": "0.0",
+    "total_tokens": 0,
+    "total_price": "0.0",
+    "currency": "USD",
+    "latency": 0
+  },
+  "finish_reason": null,
+  "files": []
+}
+
+\end{document}
